@@ -6,6 +6,7 @@ module.exports = function override(config, env) {
     new ModuleFederationPlugin({
       name: "container",
       remotes: {
+        host: `host@http://localhost:7002/_next/static/chunks/remoteEntry.js`,
         app1: "app1@http://localhost:8000/remoteEntry.js",
       },
       shared: {
